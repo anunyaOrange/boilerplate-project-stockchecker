@@ -1,7 +1,7 @@
 {
 	"name": "boilerplate-project-stockchecker",
 	"version": "0.0.1",
-	"description": "InfoSec project",
+	"description": "InfoSec project for freeCodeCamp",
 	"scripts": {
 		"start": "node server.js"
 	},
@@ -17,11 +17,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/anunyaOrange/boilerplate-project-stockchecker"
+		"url": "https://github.com/freeCodeCamp/boilerplate-project-stockchecker"
 	},
 	"keywords": [
 		"node",
 		"express"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@types/helmet": "^4.0.0"
+	}
 }

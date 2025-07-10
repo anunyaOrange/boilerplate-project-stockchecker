@@ -73,11 +73,12 @@ module.exports = function (app) {
     });
   });
   app.get('/_api/app-info', function(req, res) {
-    var hs = Object.keys(res._headers)
-      .filter(h => !h.match(/^access-control-\w+/));
+    console.log("res", res.getHeaders());
+    // var hs = Object.keys(res._headers).filter(h => !h.match(/^access-control-\w+/));
+    var hs = Object.keys(res.getHeaders()).filter(h => !h.match(/^access-control-\w+/));
     var hObj = {};
-    hs.forEach(h => {hObj[h] = res._headers[h]});
-    delete res._headers['strict-transport-security'];
+    hs.forEach(h => {hObj[h] = res.getHeaders()[h]});
+    // delete res._headers['strict-transport-security'];
     res.json({headers: hObj});
   });
   
